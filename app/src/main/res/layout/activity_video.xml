@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".VideoActivity">
     <androidx.camera.view.PreviewView
         android:id="@+id/viewFinder"
         android:layout_width="match_parent"
@@ -13,26 +12,24 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
     <Button
-        android:id="@+id/videoBtn"
+        android:id="@+id/photoBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="video"
+        android:text="photo"
         android:layout_marginStart="15dp"
         android:backgroundTint="#37d32c"
         app:layout_constraintBottom_toTopOf="@+id/switchBtn"
         app:layout_constraintStart_toStartOf="parent"/>
-
     <Button
-        android:id="@+id/image_capture_button"
+        android:id="@+id/video_capture_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="2dp"
         android:backgroundTint="#37d32c"
-        android:text="@string/take_photo"
+        android:text="@string/start_capture"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/switchBtn"
-        app:layout_constraintEnd_toStartOf="@+id/galleryBtn"
-       />
+        app:layout_constraintEnd_toStartOf="@+id/galleryBtn"/>
     <Button
         android:id="@+id/galleryBtn"
         android:layout_width="wrap_content"
@@ -50,6 +47,5 @@
         android:layout_marginStart="15dp"
         android:backgroundTint="#37d32c"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
