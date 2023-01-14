@@ -83,13 +83,12 @@ class VideoActivity : AppCompatActivity() {
         }
 
         // create and start a new recording session
-        val name = SimpleDateFormat(FILENAME_FORMAT, Locale.US)
-            .format(System.currentTimeMillis())
+        val fileName = "MP4_${System.currentTimeMillis()}.mp4"
         val contentValues = ContentValues().apply {
-            put(MediaStore.MediaColumns.DISPLAY_NAME, name)
+            put(MediaStore.MediaColumns.DISPLAY_NAME, fileName)
             put(MediaStore.MediaColumns.MIME_TYPE, "video/mp4")
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P) {
-                put(MediaStore.Video.Media.RELATIVE_PATH, "Pictures/CameraX-Image")
+                put(MediaStore.Video.Media.RELATIVE_PATH, "DCIM/Gallery")
             }
         }
 

@@ -13,7 +13,7 @@ class GalleryActivity : AppCompatActivity() {
         viewBinding = ActivityGalleryBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
         //val directory = File("/storage/self/primary/Movies/CameraX-Video")
-        val directory = File("/storage/self/primary/Pictures/CameraX-Image")
+        val directory = File("/storage/self/primary/DCIM/Gallery")
         val files = directory.listFiles() as Array<File>
         viewBinding.videoBtn.setOnClickListener {
             val intent = Intent(this, VideoActivity::class.java)
